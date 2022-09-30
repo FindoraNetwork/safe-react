@@ -204,17 +204,19 @@ function LoadSafeAddressStep(): ReactElement {
         </Col>
       </FieldContainer>
       <Block margin="sm">
-        <Paragraph color="primary" noMargin size="lg">
-          By continuing you consent to the{' '}
-          <StyledLink href="https://gnosis-safe.io/terms" rel="noopener noreferrer" target="_blank">
-            terms of use
-          </StyledLink>
-          {' and '}
-          <StyledLink href="https://gnosis-safe.io/privacy" rel="noopener noreferrer" target="_blank">
-            privacy policy
-          </StyledLink>
-          .
-        </Paragraph>
+        {null && (
+          <Paragraph color="primary" noMargin size="lg">
+            By continuing you consent to the{' '}
+            <StyledLink href="https://gnosis-safe.io/terms" rel="noopener noreferrer" target="_blank">
+              terms of use
+            </StyledLink>
+            {' and '}
+            <StyledLink href="https://gnosis-safe.io/privacy" rel="noopener noreferrer" target="_blank">
+              privacy policy
+            </StyledLink>
+            .
+          </Paragraph>
+        )}
       </Block>
     </Container>
   )

@@ -43,9 +43,11 @@ const RebrandingBanner = (): ReactElement => {
     <WidgetContainer>
       <WidgetTitle>&nbsp;</WidgetTitle>
 
-      <Track category="rebranding" action="banner-click">
-        <StyledContainer onClick={onClick} className="beamer-trigger" />
-      </Track>
+      {null && (
+        <Track category="rebranding" action="banner-click">
+          <StyledContainer onClick={onClick} className="beamer-trigger" />
+        </Track>
+      )}
     </WidgetContainer>
   )
 }

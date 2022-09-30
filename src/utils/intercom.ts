@@ -29,7 +29,7 @@ const getIntercomUserId = () => {
 export const loadIntercom = (): void => {
   const APP_ID = INTERCOM_ID
   if (!APP_ID) {
-    console.error('[Intercom] - In order to use Intercom you need to add an appID')
+    // console.error('[Intercom] - In order to use Intercom you need to add an appID')
     return
   }
   const d = document

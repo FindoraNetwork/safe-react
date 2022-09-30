@@ -11,6 +11,8 @@ export type ChainId = ChainInfo['chainId']
 export const CHAIN_ID: Record<ChainName, ChainId> = {
   UNKNOWN: '0',
   ETHEREUM: '1',
+  FINDORA: '2152',
+  ANVIL: '2153',
   RINKEBY: '4',
   VOLTA: '73799',
 }

@@ -109,6 +109,8 @@ const PairingDetails = ({ vertical = false }: PairingDetailsProps): ReactElement
     </StyledContent>
   )
 
+  if (true) return <div />
+
   return (
     <StyledContainer $vertical={vertical}>
       {vertical ? (

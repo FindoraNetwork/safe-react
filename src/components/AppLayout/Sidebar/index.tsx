@@ -128,23 +128,25 @@ const Sidebar = ({
 
         <StyledDivider />
 
-        <HelpList>
-          {!isDesktop && BEAMER_ID && (
-            <Track {...OVERVIEW_EVENTS.WHATS_NEW}>
-              <StyledListItem className="beamer-trigger" button onClick={handleClick}>
-                <ListIcon type="gift" color="secondary" size="sm" />
-                <StyledListItemText>What&apos;s new</StyledListItemText>
-              </StyledListItem>
-            </Track>
-          )}
+        {null && (
+          <HelpList>
+            {!isDesktop && BEAMER_ID && (
+              <Track {...OVERVIEW_EVENTS.WHATS_NEW}>
+                <StyledListItem className="beamer-trigger" button onClick={handleClick}>
+                  <ListIcon type="gift" color="secondary" size="sm" />
+                  <StyledListItemText>What&apos;s new</StyledListItemText>
+                </StyledListItem>
+              </Track>
+            )}
 
-          <Track {...OVERVIEW_EVENTS.HELP_CENTER}>
-            <HelpCenterLink href="https://help.gnosis-safe.io/en/" target="_blank" title="Help Center of Gnosis Safe">
-              <ListIcon type="question" color="secondary" size="sm" />
-              <StyledListItemText>Help Center</StyledListItemText>
-            </HelpCenterLink>
-          </Track>
-        </HelpList>
+            <Track {...OVERVIEW_EVENTS.HELP_CENTER}>
+              <HelpCenterLink href="https://help.gnosis-safe.io/en/" target="_blank" title="Help Center of Gnosis Safe">
+                <ListIcon type="question" color="secondary" size="sm" />
+                <StyledListItemText>Help Center</StyledListItemText>
+              </HelpCenterLink>
+            </Track>
+          </HelpList>
+        )}
       </HelpContainer>
     </>
   )

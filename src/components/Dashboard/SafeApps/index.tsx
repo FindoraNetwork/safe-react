@@ -111,6 +111,8 @@ const SafeApps = ({ size = 6 }: { size?: number }): ReactElement => {
 
   if (isLoading) return LoadingState
 
+  if (true) return <div />
+
   return (
     <WidgetContainer id="safe-apps">
       <WidgetTitle>Safe Apps</WidgetTitle>

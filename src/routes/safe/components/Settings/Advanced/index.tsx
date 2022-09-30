@@ -64,11 +64,14 @@ const Advanced = (): ReactElement => {
         </Title>
         <InfoText size="lg">
           Modules allow you to customize the access-control logic of your Safe. Modules are potentially risky, so make
-          sure to only use modules from trusted sources. Learn more about modules{' '}
-          <a href={DOCS_LINK} rel="noopener noreferrer" target="_blank">
-            here
-          </a>
-          .
+          sure to only use modules from trusted sources.
+          {/* Learn more about modules{' '} */}
+          {null && (
+            <a href={DOCS_LINK} rel="noopener noreferrer" target="_blank">
+              here
+            </a>
+          )}
+          {/* . */}
         </InfoText>
 
         {!moduleData || !moduleData.length ? <NoModuleLegend /> : <ModulesTable moduleData={moduleData} />}
@@ -82,7 +85,8 @@ const Advanced = (): ReactElement => {
           </Title>
           <InfoText size="lg">
             Transaction guards impose additional constraints that are checked prior to executing a Safe transaction.
-            Transaction guards are potentially risky, so make sure to only use modules from trusted sources. Learn more
+            Transaction guards are potentially risky, so make sure to only use modules from trusted sources.
+            {/* Learn more
             about transaction guards{' '}
             <a
               href="https://help.gnosis-safe.io/en/articles/5324092-what-is-a-transaction-guard"
@@ -91,7 +95,7 @@ const Advanced = (): ReactElement => {
             >
               here
             </a>
-            .
+            . */}
           </InfoText>
 
           {!guard ? <NoTransactionGuardLegend /> : <TransactionGuard address={guard} />}
