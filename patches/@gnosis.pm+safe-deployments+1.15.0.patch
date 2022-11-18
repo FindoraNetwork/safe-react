@@ -1,0 +1,12 @@
+diff --git a/node_modules/@gnosis.pm/safe-deployments/src/assets/v1.3.0/proxy_factory.json b/node_modules/@gnosis.pm/safe-deployments/src/assets/v1.3.0/proxy_factory.json
+index af2262b..168f7f1 100644
+--- a/node_modules/@gnosis.pm/safe-deployments/src/assets/v1.3.0/proxy_factory.json
++++ b/node_modules/@gnosis.pm/safe-deployments/src/assets/v1.3.0/proxy_factory.json
+@@ -33,6 +33,7 @@
+     "1285": "0xa6B71E26C5e0845f74c812102Ca7114b6a896AB2",
+     "1287": "0xa6B71E26C5e0845f74c812102Ca7114b6a896AB2",
+     "1984": "0xa6B71E26C5e0845f74c812102Ca7114b6a896AB2",
++    "2152": "0x18a97F05CAc0aCfB46D620aBA1699989398ABB6a",
+     "4002": "0xa6B71E26C5e0845f74c812102Ca7114b6a896AB2",
+     "7341": "0xa6B71E26C5e0845f74c812102Ca7114b6a896AB2",
+     "9000": "0xa6B71E26C5e0845f74c812102Ca7114b6a896AB2",
