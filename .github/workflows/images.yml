@@ -32,7 +32,7 @@ jobs:
         with:
           images: ghcr.io/FindoraNetwork/safe-react
           tags: |
-            type=sha
+            type=raw,value={{branch}}-{{sha}}-{{date 'x'}}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
