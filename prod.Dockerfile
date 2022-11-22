@@ -11,8 +11,6 @@ WORKDIR /app
 
 COPY package.json yarn.lock .
 
-COPY patches .
-
 RUN yarn install
 
 COPY . .
