@@ -39,7 +39,8 @@ const useRemoteSafeApps = (): ReturnType => {
           setRemoteSafeApps(result.map((app) => ({ ...app, fetchStatus: FETCH_STATUS.SUCCESS, id: String(app.id) })))
           setStatus(FETCH_STATUS.SUCCESS)
         } else {
-          throw new Error('Empty apps array 🤬')
+          setStatus(FETCH_STATUS.SUCCESS)
+          // throw new Error('Empty apps array 🤬')
         }
       } catch (e) {
         setStatus(FETCH_STATUS.ERROR)
