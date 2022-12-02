@@ -19,6 +19,9 @@ import { hasFeature } from 'src/logic/safe/utils/safeVersion'
 import { checksumAddress } from 'src/utils/checksumAddress'
 import { isValidAddress } from 'src/utils/isValidAddress'
 import { Wallet } from 'bnc-onboard/dist/src/interfaces'
+import gnosis_safe_l2 from '@gnosis.pm/safe-deployments/dist/assets/v1.3.0/gnosis_safe_l2.json'
+import multi_send from '@gnosis.pm/safe-deployments/dist/assets/v1.3.0/multi_send.json'
+import proxy_factory from '@gnosis.pm/safe-deployments/dist/assets/v1.3.0/proxy_factory.json'
 
 // This providers have direct relation with name assigned in bnc-onboard configuration
 export enum WALLET_PROVIDER {
@@ -171,12 +174,22 @@ export const getSafeSDK = async (signerAddress: string, safeAddress: string, saf
   if (semverSatisfies(safeVersion, '<1.3.0')) {
     isL1SafeMasterCopy = true
   } else {
-    isL1SafeMasterCopy = networkId === CHAIN_ID.ETHEREUM
+    isL1SafeMasterCopy = networkId === CHAIN_ID.FINDORA
   }
 
   return await Safe.create({
     ethAdapter,
     safeAddress,
     isL1SafeMasterCopy,
+    contractNetworks: {
+      2152: {
+        multiSendAddress: multi_send.networkAddresses[2152],
+        multiSendAbi: multi_send.abi as any,
+        safeMasterCopyAddress: gnosis_safe_l2.networkAddresses[2152],
+        safeMasterCopyAbi: gnosis_safe_l2.abi as any,
+        safeProxyFactoryAddress: proxy_factory.networkAddresses[2152],
+        safeProxyFactoryAbi: proxy_factory.abi as any,
+      },
+    },
   })
 }

@@ -156,7 +156,6 @@ export const TxOwners = ({
   }
 
   const confirmationsNeeded = detailedExecutionInfo.confirmationsRequired - detailedExecutionInfo.confirmations.length
-
   const isImmediateExecution = isPending && threshold === 1
   const isConfirmed = confirmationsNeeded <= 0 || isImmediateExecution
   const isExecuted = !!detailedExecutionInfo.executor
