@@ -105,13 +105,14 @@ const NetworkSelector = ({ open, toggle, clickAway }: NetworkSelectorProps): Rea
   return (
     <>
       <div className={classes.root} ref={networkRef}>
-        <Col className={classes.networkList} end="sm" middle="xs">
-          {/* <Col className={classes.networkList} end="sm" middle="xs" onClick={toggle}> */}
+        {/* <Col className={classes.networkList} end="sm" middle="xs"> */}
+        <Col className={classes.networkList} end="sm" middle="xs" onClick={toggle}>
           <NetworkLabel />
-          {/* <IconButton className={classes.expand} disableRipple>
+          <IconButton className={classes.expand} disableRipple>
             {open ? <ExpandLess /> : <ExpandMore />}
-          </IconButton> */}
+          </IconButton>
         </Col>
+        {/* </Col> */}
         <Divider />
       </div>
       <Popper
