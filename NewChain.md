@@ -1,6 +1,6 @@
 ## How to add a new chain.
 
-- https://safe-config-service.multisig.findora.org/admin/chains/chain/add/
+- https://safe-config-service.multisig.fractal.org/admin/chains/chain/add/
 - `git clone https://github.com/FindoraNetwork/safe-react`
   `yarn instal`
 - node_modules/@gnosis.pm/safe-deployments/dist/assets/v1.3.0/compatibility_fallback_handler.json add CompatibilityFallbackHandler address

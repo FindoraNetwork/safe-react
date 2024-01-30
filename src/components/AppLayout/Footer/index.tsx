@@ -57,7 +57,7 @@ const Footer = (): React.ReactElement => {
 
   return (
     <footer className={classes.footer}>
-      <span className={classes.item}>©{date.getFullYear()} Findora</span>
+      <span className={classes.item}>©{date.getFullYear()} Fractal</span>
       <span className={classes.sep}>|</span>
       {null && (
         <Link className={cn(classes.item, classes.link)} target="_blank" to="https://gnosis-safe.io/terms">
@@ -65,11 +65,11 @@ const Footer = (): React.ReactElement => {
         </Link>
       )}
       {/* <span className={classes.sep}>|</span> */}
-      <Link className={cn(classes.item, classes.link)} target="_blank" to="https://findora.org/privacy-policy/">
+      <Link className={cn(classes.item, classes.link)} target="_blank" to="https://fractal.org/privacy-policy/">
         Privacy Policy
       </Link>
       <span className={classes.sep}>|</span>
-      <Link className={cn(classes.item, classes.link)} target="_blank" to="https://findora.org/terms-of-use/">
+      <Link className={cn(classes.item, classes.link)} target="_blank" to="https://fractal.org/terms-of-use/">
         Terms of Use
       </Link>
       {null && (
